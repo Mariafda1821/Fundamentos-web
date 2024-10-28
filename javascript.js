@@ -185,7 +185,7 @@ const libros = [
       cantidadDisponible: 13,
       precio: 74000,
       imagen:
-        "https://www.penguinlibros.com/co/232993-thickbox_default/madame-bovary.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9f/Madame_Bovary_1857_%28hi-res%29.jpg",
     },
     {
       titulo: "Hamlet",
@@ -195,7 +195,7 @@ const libros = [
       cantidadDisponible: 15,
       precio: 68000,
       imagen:
-        "https://www.penguinlibros.com/co/299993-thickbox_default/hamlet.jpg",
+        "https://images.cdn1.buscalibre.com/fit-in/360x360/08/a4/08a45da18327d8388b74e7e94c7ad3be.jpg",
     },
     {
       titulo: "Drácula",
@@ -205,7 +205,7 @@ const libros = [
       cantidadDisponible: 10,
       precio: 79000,
       imagen:
-        "https://www.penguinlibros.com/co/300110-thickbox_default/dracula.jpg",
+        "https://www.tornamesa.co/imagenes/9788418/978841876549.GIF",
     },
     {
       titulo: "El hombre invisible",
@@ -215,7 +215,7 @@ const libros = [
       cantidadDisponible: 8,
       precio: 53000,
       imagen:
-        "https://www.penguinlibros.com/co/295510-thickbox_default/el-hombre-invisible.jpg",
+        "https://cdn.prod.website-files.com/6034d7d1f3e0f52c50b2adee/654b63831a2d37b38783791e_03Dv9FzxNqd4bD6zrPzd5b6EKybwKcaAaum0pqR15d0.jpeg",
     },
     {
       titulo: "Ana Karenina",
@@ -225,7 +225,7 @@ const libros = [
       cantidadDisponible: 12,
       precio: 78000,
       imagen:
-        "https://www.penguinlibros.com/co/297010-thickbox_default/ana-karenina.jpg",
+        "https://images.cdn3.buscalibre.com/fit-in/360x360/42/be/42be3fae8b5074daefa9717ba1d3f983.jpg",
     },
     {
       titulo: "El retrato de Dorian Gray",
@@ -235,7 +235,7 @@ const libros = [
       cantidadDisponible: 9,
       precio: 62000,
       imagen:
-        "https://www.penguinlibros.com/co/296010-thickbox_default/el-retrato-de-dorian-gray.jpg",
+        "https://images.cdn2.buscalibre.com/fit-in/360x360/91/18/9118645bef1e527a3e1f14e7187ac89e.jpg",
     },
     {
       titulo: "El perfume",
@@ -245,7 +245,7 @@ const libros = [
       cantidadDisponible: 5,
       precio: 70000,
       imagen:
-        "https://www.penguinlibros.com/co/240110-thickbox_default/el-perfume.jpg",
+        "https://images.cdn2.buscalibre.com/fit-in/520x520/a6/ce/a6cee3390585e27d1258944ed98ad960.jpg",
     },
     {
       titulo: "La insoportable levedad del ser",
@@ -255,7 +255,7 @@ const libros = [
       cantidadDisponible: 10,
       precio: 68000,
       imagen:
-        "https://www.penguinlibros.com/co/259883-thickbox_default/la-insoportable-levedad-del-ser.jpg",
+        "https://images.cdn2.buscalibre.com/fit-in/360x360/f9/43/f943196aef88fa5a22723a8740e09b60.jpg",
     },
     {
       titulo: "El amor en los tiempos del cólera",
@@ -265,7 +265,7 @@ const libros = [
       cantidadDisponible: 13,
       precio: 85000,
       imagen:
-        "https://www.penguinlibros.com/co/299583-thickbox_default/el-amor-en-los-tiempos-del-colera.jpg",
+        "https://images.cdn1.buscalibre.com/fit-in/360x360/b0/3e/b03e98118b9e2cf5b94bb0548bfa59c5.jpg",
     },
     {
       titulo: "Cumbres borrascosas",
@@ -275,7 +275,7 @@ const libros = [
       cantidadDisponible: 7,
       precio: 65000,
       imagen:
-        "https://www.penguinlibros.com/co/298110-thickbox_default/cumbres-borrascosas.jpg",
+        "https://cdn.prod.website-files.com/6034d7d1f3e0f52c50b2adee/625454187128ea32cdb140e8_6034d7d1f3e0f5072bb2b1ca_Cumbres-borrascosas-emily-bronte-editorial-alma.jpeg",
     },
     {
       titulo: "Las aventuras de Sherlock Holmes",
@@ -285,7 +285,7 @@ const libros = [
       cantidadDisponible: 14,
       precio: 72000,
       imagen:
-        "https://www.penguinlibros.com/co/232983-thickbox_default/las-aventuras-de-sherlock-holmes.jpg",
+        "https://images.cdn1.buscalibre.com/fit-in/360x360/07/c8/07c8ab4dfef3c9dcd62c9685707492b3.jpg",
     },
     {
       titulo: "La sombra del viento",
@@ -295,7 +295,7 @@ const libros = [
       cantidadDisponible: 16,
       precio: 75000,
       imagen:
-        "https://www.penguinlibros.com/co/237013-thickbox_default/la-sombra-del-viento.jpg",
+        "https://images.cdn2.buscalibre.com/fit-in/360x360/4a/f8/4af862174ba709db62744f988c62e3b6.jpg",
     },
     {
       titulo: "La casa de los espíritus",
@@ -305,7 +305,7 @@ const libros = [
       cantidadDisponible: 11,
       precio: 71000,
       imagen:
-        "https://www.penguinlibros.com/co/278833-thickbox_default/la-casa-de-los-espiritus.jpg",
+        "https://imagessl8.casadellibro.com/a/l/s5/98/9788401352898.webp",
     },
     {
       titulo: "Memorias de mis putas tristes",
@@ -315,7 +315,7 @@ const libros = [
       cantidadDisponible: 8,
       precio: 58000,
       imagen:
-        "https://www.penguinlibros.com/co/236583-thickbox_default/memorias-de-mis-putas-tristes.jpg",
+        "https://images.cdn2.buscalibre.com/fit-in/360x360/36/bc/36bc084b6b8c736e28c32125f6a2144a.jpg",
     },
     {
       titulo: "Pedro Páramo",
@@ -325,7 +325,7 @@ const libros = [
       cantidadDisponible: 17,
       precio: 49000,
       imagen:
-        "https://www.penguinlibros.com/co/238783-thickbox_default/pedro-paramo.jpg",
+        "https://images.cdn3.buscalibre.com/fit-in/520x520/4b/7e/4b7ee861b9f473b4dcd55bbea2893916.jpg",
     },
     {
       titulo: "El extranjero",
@@ -335,7 +335,7 @@ const libros = [
       cantidadDisponible: 12,
       precio: 69000,
       imagen:
-        "https://www.penguinlibros.com/co/299477-thickbox_default/el-extranjero.jpg",
+        "https://www.tornamesa.co/imagenes/9789962/978996272402.GIF",
     },
     {
       titulo: "El hombre en busca de sentido",
@@ -345,7 +345,7 @@ const libros = [
       cantidadDisponible: 9,
       precio: 53000,
       imagen:
-        "https://www.penguinlibros.com/co/290883-thickbox_default/el-hombre-en-busca-de-sentido.jpg",
+        "https://images.cdn1.buscalibre.com/fit-in/360x360/f6/d0/f6d0aba3e83069dee397322df8889ec4.jpg",
     },
     {
       titulo: "La carretera",
@@ -355,7 +355,7 @@ const libros = [
       cantidadDisponible: 15,
       precio: 67000,
       imagen:
-        "https://www.penguinlibros.com/co/299583-thickbox_default/la-carretera.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-W446dq7qkOGKZDp_efi1Q-oMN2pTMFsHHQ&s",
     },
     {
       titulo: "El nombre de la rosa",
@@ -365,7 +365,7 @@ const libros = [
       cantidadDisponible: 10,
       precio: 73000,
       imagen:
-        "https://www.penguinlibros.com/co/297083-thickbox_default/el-nombre-de-la-rosa.jpg",
+        "https://images.cdn1.buscalibre.com/fit-in/360x360/4d/b9/4db9da291dbd3e39949c68bfd8e364b9.jpg",
     },
     {
       titulo: "El túnel",
@@ -375,7 +375,7 @@ const libros = [
       cantidadDisponible: 12,
       precio: 55000,
       imagen:
-        "https://www.penguinlibros.com/co/299873-thickbox_default/el-tunel.jpg",
+        "https://images.cdn3.buscalibre.com/fit-in/360x360/90/9a/909a6478080bd205668e665c97b2f137.jpg",
     },
     {
       titulo: "Siddhartha",
@@ -385,7 +385,7 @@ const libros = [
       cantidadDisponible: 13,
       precio: 52000,
       imagen:
-        "https://www.penguinlibros.com/co/277673-thickbox_default/siddhartha.jpg",
+        "https://images.cdn2.buscalibre.com/fit-in/360x360/97/82/97822208af909f07ea67963d470b5171.jpg",
     },
     {
       titulo: "Frankenstein",
@@ -395,7 +395,7 @@ const libros = [
       cantidadDisponible: 14,
       precio: 76000,
       imagen:
-        "https://www.penguinlibros.com/co/298301-thickbox_default/frankenstein.jpg",
+        "https://images.cdn1.buscalibre.com/fit-in/360x360/9a/e8/9ae837a621fdc1ad2d8a39d94017dfcf.jpg",
     },
   ];
   console.log(libros);
