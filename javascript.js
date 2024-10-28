@@ -5,7 +5,7 @@ const libros = [
       anopublico: 1997,
       genero: "Debate",
       cantidadDisponible: 15,
-      precio: 70.0,
+      precio: 70000,
       imagen:
         "https://www.penguinlibros.com/co/288479-thickbox_default/voces-de-chernobil.jpg",
     },
