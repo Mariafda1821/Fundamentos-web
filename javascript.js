@@ -1,4 +1,4 @@
-const libros = [
+  const libros = [
     {
       titulo: "Voces de Chernóbil",
       autor: "Svetlana Alexiévich",
@@ -398,5 +398,19 @@ const libros = [
         "https://images.cdn1.buscalibre.com/fit-in/360x360/9a/e8/9ae837a621fdc1ad2d8a39d94017dfcf.jpg",
     },
   ];
-  console.log(libros);
   
+function redir1(){
+
+  const formulario = document.getElementById("formulario");
+    const inputs = formulario.getElementsByTagName("input");
+    
+    for (let input of inputs) {
+        if (input.value.trim() === "") {
+            alert("Te falta campos por llenar.");
+            return;
+        }
+}
+  window.location.href = "vista2.html";
+}
+
+  localStorage.setItem('libro', JSON.stringify(libros));
