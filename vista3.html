@@ -21,31 +21,77 @@
     </header>
     <main>
       <br>
-      <table>
-        <thead>
-          <tr>
-            <th>Titulo</th>
-            <th>Autor</th>
-            <th>Año publicación</th>
-            <th>Genero</th>
-            <th>Cantidad disponible</th>
-            <th>Precio</th>
-            <th>Acción</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cien años de soledad</td>
-            <td>Gabriel Garcia Marquez</td>
-            <td>1996</td>
-            <td>Fantasia</td>
-            <td>100</td>
-            <td>70000</td>
-            <td><button class="btt2" >Eliminar</button></td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
+      
+      <section id="compraActual">
+        <h2>Compra Actual</h2>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="productosCarrito">
+                <!-- Aquí se agregarán las filas de productos en el carrito -->
+            </tbody>
+        </table>
+        <br>
+        <button onclick="cancelarCompra()">Cancelar Compra</button>
+        <button onclick="continuarComprando()">Continuar Comprando</button>
+    </section>
+<br>
+    <!-- Sección de Resumen de Compra -->
+    <section id="resumenCompra">
+        <h2>Resumen de Compra</h2>
+        <p>Total de productos: <span id="totalProductos">0</span></p>
+        <p>Total de la compra: $<span id="totalCompra">0</span></p>
+        <label>
+            <input type="checkbox" id="cargoDomicilio" onchange="actualizarCostoTotal()">
+            Cargo de domicilio (15,000)
+        </label>
+        <button onclick="continuarComprando()">Regresar a Productos</button>
+    </section>
+<br>
+    <section id="tarjetaCredito">
+        <h2>Información de Tarjeta de Crédito</h2>
+        <br>
+        <form id="formTarjetaCredito" onsubmit="confirmarCompra(event)">
+            <label>Número de Tarjeta</label>
+            <input type="text" id="numeroTarjeta" required>
+
+            <label>Fecha de Expiración (MM/AA)</label>
+            <input type="text" id="fechaExpiracion" required>
+
+            <label>Código de Seguridad</label>
+            <input type="password" id="codigoSeguridad" required>
+            <span id="toggleCodigo" onclick="toggleCodigo()">👁️</span>
+
+            <label>Nombre del Titular</label>
+            <input type="text" id="nombreTitular" required>
+
+            <label>País de Emisión</label>
+            <select id="paisEmision" required>
+           
+                <option value="CO">Colombia</option>
+                <option value="MX">México</option>
+               
+            </select>
+            <label>Tipo de Tarjeta</label>
+            <select id="tipoTarjeta" required>
+                <option value="mastercard">Mastercard</option>
+                <option value="visa">Visa</option>
+                <option value="prepagada">Prepagada</option>
+            </select>
+<br><br>
+            <button type="reset">Limpiar</button>
+            <button type="submit">Confirmar Compra</button>
+        </form>
+    </section>
+    <br>
     </main>
     <footer>
       <p>Todos los derechos reservados - Libros entre árboles © 2024</p>

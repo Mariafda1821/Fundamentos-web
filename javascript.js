@@ -410,7 +410,198 @@ function redir1(){
             return;
         }
 }
-  window.location.href = "vista2.html";
+}
+function redir2(){
+
+  const formulario = document.getElementById("form");
+    const inputs = formulario.getElementsByTagName("input");
+    
+    for (let input of inputs) {
+        if (input.value.trim() === "") {
+            alert("Te falta campos por llenar.");
+            return;
+        }
+}
+  window.location.href = "index.html";
+}
+function redir3(){
+
+  const formulario = document.getElementById("form1");
+    const inputs = formulario.getElementsByTagName("input");
+    
+    for (let input of inputs) {
+        if (input.value.trim() === "") {
+            alert("Te falta campos por llenar.");
+            return;
+        }
+}
+  window.location.href = "vista3.html";
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const productosGuardados = JSON.parse(localStorage.getItem('libros'));
+  const catalogo = document.querySelector('.catalogo');
+  const aside = document.querySelector('aside');
+  const filtro1 = document.getElementById('filtro1');
+  const filtroProveedor = document.getElementById('filtro-proveedor');
+  const filtrarBtn = document.getElementById('filtrar-btn');
+  const limpiarFiltrosBtn = document.getElementById('limpiar-filtros');
+
+  aside.classList.add('oculto');
+
+  let productosCargados = 0;
+  const productosPorPagina = 15;
+  let estadoScroll = true;
+  let productosFiltrados = [...productosGuardados];
+})
+function scrollInfinito() {
+  if (estadoScroll && window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+    cargarProductos(productosFiltrados);
+  }
+}
+
+function mostrarDetallesProducto(producto) {
+  if (producto) {
+    document.getElementById('imagenGrande').src = producto.img;
+    document.getElementById('nombreArtGrande').textContent = producto.nombre;
+    document.getElementById('proveedor').textContent = `Proveedor: ${producto.proveedor}`;
+    document.getElementById('stockGrande').textContent = `Stock: ${producto.stock}`;
+    document.getElementById('idProducto').textContent = `ID: ${producto.id}`;
+    document.getElementById('precioGrande').textContent = `Precio: $${producto.precio.toLocaleString('es-CO')}`;
+    document.getElementById('categoria').textContent = `Categoría: ${producto.categoria}`;
+    aside.classList.remove('oculto'); 
+    
+    const agregarCarritoBtn = document.getElementById('agregar-carrito');
+    agregarCarritoBtn.onclick = () => agregarAlCarrito(producto);
+  } else {
+    console.error('Producto no encontrado');
+  }
+}
+
+function filtrarProductos() {
+  estadoScroll = false;
+  const categoriaSeleccionada = filtro1.value.trim();
+  const proveedorSeleccionado = filtroProveedor.value;
+
+
+  productosFiltrados = productosGuardados.filter(producto => {
+    const coincideCategoria = categoriaSeleccionada ? producto.categoria === categoriaSeleccionada : true;
+    const coincideProveedor = proveedorSeleccionado ? producto.proveedor.toLowerCase().includes(proveedorSeleccionado) : true;
+    return coincideCategoria && coincideProveedor;
+  });
+
+  catalogo.innerHTML = '';
+  productosCargados = 0;
+  cargarProductos(productosFiltrados);
+  window.addEventListener('scroll', scrollInfinito);
+}
+
+window.addEventListener('scroll', scrollInfinito);
+cargarProductos(productosGuardados);
+
+catalogo.addEventListener('click', (e) => {
+  if (e.target.classList.contains('ver-detalles')) {
+    const idProducto = e.target.getAttribute('data-id');
+    const productoSeleccionado = productosGuardados.find(p => p.id == idProducto);
+    mostrarDetallesProducto(productoSeleccionado);
+  }
+});
+
+filtrarBtn.addEventListener('click', filtrarProductos);
+limpiarFiltrosBtn.addEventListener('click', () => {
+  filtro1.value = '';
+  filtroProveedor.value = '';
+  catalogo.innerHTML = '';
+  productosCargados = 0;
+  productosFiltrados = [...productosGuardados];
+  cargarProductos(productosFiltrados);
+  estadoScroll = true;
+});
+
+function agregarAlCarrito(producto) {
+  const cantidad = document.getElementById('cantidad').value;
+
+if (isNaN(cantidad) || cantidad <= 0) {
+  alert("La cantidad debe ser un número positivo.");
+  return;
+}
+const productoCarrito = {
+    ...producto,
+    cantidad: parseInt(cantidad)
+};
+
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+const indiceExistente = carrito.findIndex(item => item.id === productoCarrito.id);
+if (indiceExistente > -1) {
+    carrito[indiceExistente].cantidad += productoCarrito.cantidad;
+} else {
+    carrito.push(productoCarrito);
+}}
+
+
+let totalCompra = 0;
+let totalProductos = 0;
+
+function actualizarCostoTotal() {
+    const cargoDomicilio = document.getElementById('cargoDomicilio').checked;
+    const costoDomicilio = cargoDomicilio ? 15000 : 0;
+    const costoTotal = totalCompra + costoDomicilio;
+    document.getElementById('totalCompra').textContent = costoTotal;
+}
+
+function continuarComprando() {
+    // Redirigir a la página de productos
+    window.location.href = 'productos.html';
+}
+
+function cancelarCompra() {
+    // Redirigir a la página inicial
+    window.location.href = 'index.html';
+}
+
+function toggleCodigo() {
+    const codigoInput = document.getElementById('codigoSeguridad');
+    if (codigoInput.type === 'password') {
+        codigoInput.type = 'text';
+    } else {
+        codigoInput.type = 'password';
+    }
+}
+
+function confirmarCompra(event) {
+    event.preventDefault();
+
+    // Validar campos de tarjeta
+    const numeroTarjeta = document.getElementById('numeroTarjeta').value;
+    const fechaExpiracion = document.getElementById('fechaExpiracion').value;
+    const codigoSeguridad = document.getElementById('codigoSeguridad').value;
+
+    if (!numeroTarjeta || !fechaExpiracion || !codigoSeguridad) {
+        alert('Por favor, complete toda la información de la tarjeta.');
+        return;
+    }
+
+    // Ejecutar la promesa de confirmación
+    const confirmarPromesa = new Promise((resolve, reject) => {
+        const tiempo = Math.floor(Math.random() * 1000) + 2000;
+        setTimeout(() => {
+            if (totalProductos > 20) {
+                reject('No puede seleccionar más de 20 productos.');
+            } else {
+                resolve('Pago realizado con éxito.');
+            }
+        }, tiempo);
+    });
+
+    confirmarPromesa
+        .then((mensaje) => {
+            alert(mensaje);
+            window.location.href = 'index.html';
+        })
+        .catch((error) => {
+            alert(error);
+        });
 }
 
   localStorage.setItem('libro', JSON.stringify(libros));

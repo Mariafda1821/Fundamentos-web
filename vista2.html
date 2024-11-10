@@ -22,8 +22,38 @@
       <br>
       <h3>Vista de productos</h3>
       <br>
-      
+      <nav>
+        <button id="form" type="button" onclick="redir2()">Cancelar Compra</button>
+        <button id="form1<" type="button" onclick="redir3()">Completar Compra</button>
+    </nav>
       <br>
+      <div class="filter-section">
+        <select id="filterCategory">
+            <option value="">Filtrar por categoría</option>
+           <option value="">Drama</option>
+           <option value="">Ciencia ficción</option>
+           <option value="">Novela</option>
+           <option value="">Realismo mágico</option>
+        </select>
+        <input type="text" id="filterSearch" placeholder="Buscar...">
+    </div>
+
+      <section class="catalogo"></section>
+      <aside class="oculto">
+        <article class="detalle-producto">
+          <img id="imagenGrande" alt="">
+          <p id="nombreArtGrande"></p>
+          <span id="proveedor"></span>
+          <span id="stockGrande"></span>
+          <p id="idProducto"></p>
+          <span id="precioGrande"></span> 
+          <p id="categoria"></p>
+          <label for="cantidad">Cantidad a comprar:</label>
+          <input type="number" id="cantidad" name="cantidad" min="1" required>
+          <button id="agregar-carrito">Agregar al carrito</button>
+        </article>
+      </aside>
+    <br>
     </main>
     <footer>
       <p>Todos los derechos reservados - Libros entre árboles © 2024</p>

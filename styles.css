@@ -74,3 +74,30 @@ table{
   text-align: center;
   border: 2px solid #487045;
 }
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.filter-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#productList {
+    display: grid;
+    
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#productDetail.hidden {
+    display: none;
+}
